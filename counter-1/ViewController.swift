@@ -8,6 +8,7 @@
 
 import UIKit
 var count = 0
+var color = 0
 class ViewController: UIViewController {
 
     @IBOutlet weak var lbl: UILabel!
@@ -31,7 +32,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func changeColor(_ sender: Any) {
-        view.backgroundColor = UIColor.yellow
+        if color == 0 {
+            self.view.backgroundColor = UIColor.green
+            color = color + 1
+        }
+        else if color == 1 {
+            self.view.backgroundColor = UIColor.blue
+            color = color - 1
+        }
     }
     
 
